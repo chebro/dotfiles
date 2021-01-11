@@ -19,7 +19,7 @@
 
 <br>
 
-<img src="https://raw.githubusercontent.com/chebro/dotfiles/master/Misc/screenshots/1.png" alt="img" align="right" width="680px">
+<img src="https://raw.githubusercontent.com/chebro/dotfiles/master/Misc/screenshots/1.png" alt="img" align="right" width="500px">
 
 Had some spare time so.. I installed Arch and setup up something nice :)
 
