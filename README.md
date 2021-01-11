@@ -38,3 +38,6 @@ Had some spare time so... I installed Arch and setup up something nice :)
 <img src="https://raw.githubusercontent.com/chebro/dotfiles/master/Misc/screenshots/merge.png" alt="img" align="center" width="900px">
 
 <img src="https://raw.githubusercontent.com/chebro/dotfiles/master/Misc/screenshots/3.png" alt="img" align="center" width="900px">
+
+wallpaper: (custom spin-off of the [original](https://wallpaperaccess.com/minimalist-water))
+<img src="https://raw.githubusercontent.com/chebro/dotfiles/master/Misc/wallpapers/nord-lines.png" alt="img" align="center" width="900px">
