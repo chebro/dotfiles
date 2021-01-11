@@ -28,3 +28,11 @@ Had some spare time so... I installed Arch and setup up something nice :)
 + **File Manager**: [Ranger](https://github.com/ranger/ranger)
 + **Document Viewer**: [Zathura](https://pwmt.org/projects/zathura/)
 + **Color Scheme**: [Nord](https://www.nordtheme.com/)
+
+## Screenshots
+
+[r/unixporn poost](https://www.reddit.com/r/unixporn/comments/kv1mjv/i3_inner_peace/):
+
+<img src="https://raw.githubusercontent.com/chebro/dotfiles/master/Misc/screenshots/merge.png" alt="img" align="center" width="900px">
+
+<img src="https://raw.githubusercontent.com/chebro/dotfiles/master/Misc/screenshots/3.png" alt="img" align="center" width="900px">
