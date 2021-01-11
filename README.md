@@ -29,9 +29,11 @@ Had some spare time so... I installed Arch and setup up something nice :)
 + **Document Viewer**: [Zathura](https://pwmt.org/projects/zathura/)
 + **Color Scheme**: [Nord](https://www.nordtheme.com/)
 
+<br>
+
 ## Screenshots
 
-[r/unixporn poost](https://www.reddit.com/r/unixporn/comments/kv1mjv/i3_inner_peace/):
+[r/unixporn post](https://www.reddit.com/r/unixporn/comments/kv1mjv/i3_inner_peace/):
 
 <img src="https://raw.githubusercontent.com/chebro/dotfiles/master/Misc/screenshots/merge.png" alt="img" align="center" width="900px">
 
