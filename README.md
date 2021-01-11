@@ -17,13 +17,9 @@
 #### :diamond_shape_with_a_dot_inside: Arch :diamond_shape_with_a_dot_inside: i3 :diamond_shape_with_a_dot_inside: Nord    :diamond_shape_with_a_dot_inside:
 </div>
 
-<br>
+<img src="https://raw.githubusercontent.com/chebro/dotfiles/master/Misc/screenshots/1.png" alt="img" align="right" width="550px">
+Had some spare time so... I installed Arch and setup up something nice :)
 
-<img src="https://raw.githubusercontent.com/chebro/dotfiles/master/Misc/screenshots/1.png" alt="img" align="right" width="500px">
-
-Had some spare time so.. I installed Arch and setup up something nice :)
-
-Specs:
 + **OS**: Arch Linux
 + **WM**: [i3](https://github.com/Airblader/i3)
 + **Shell**: [Zsh](https://wiki.archlinux.org/index.php/Zsh) + [ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
