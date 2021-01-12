@@ -6,12 +6,11 @@
 #	                               |___/ 
 
 set $mod Mod4
-set $refresh_i3status killall -SIGUSR1 i3status
 font pango:JetBrains Mono 13
 
 # Volume control
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%-
 bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle 
 
 # Media control

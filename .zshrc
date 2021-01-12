@@ -71,6 +71,7 @@ alias df='df -h'                                                # Human-readable
 alias free='free -m'                                            # Show sizes in MB
 alias pcman='sudo pacman'										# Lazy sudo pacman 
 alias i3lock='~/.config/i3lock/lock.sh'							# i3lock script
+alias rm='print "Did you mean trash-put? No? use \\\rm then"; false'
 alias config='/usr/bin/git --git-dir=$HOME/Documents/dotfiles --work-tree=$HOME'
 alias pfetch='PF_INFO="ascii title os kernel uptime pkgs memory" HOSTNAME="nautilus" pfetch'
 
