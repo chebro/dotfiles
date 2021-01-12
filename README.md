@@ -31,6 +31,10 @@ Had some spare time so... I installed Arch and setup up something nice :)
 
 <br>
 
+## How to clone
+
+Coming soon!
+
 ## Screenshots
 
 [r/unixporn post](https://www.reddit.com/r/unixporn/comments/kv1mjv/i3_inner_peace/):
