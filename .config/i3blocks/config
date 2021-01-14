@@ -116,7 +116,7 @@ border_bottom=2
 
 [battery]
 command=~/.config/i3blocks/scripts/battery.sh
-interval=120
+interval=2
 color=#eceff4
 background=#4c566a
 border=#2e3440

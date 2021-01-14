@@ -92,8 +92,9 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up			
 bindkey '^[[B' history-substring-search-down
 
-# tell GPG to pipe output to tty
-export GPG_TTY=$(tty)
+# export stuff
+export EDITOR=vim				# set default editor
+export GPG_TTY=$(tty)			# tell GPG to pipe output to tty
 
 # change prompt at ⏾
 if [[ $(~/Documents/scripts/is-it-dark.sh) -ne 0 ]]; then SPACESHIP_CHAR_SYMBOL="⏾ " fi

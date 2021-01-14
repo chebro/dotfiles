@@ -1,14 +1,14 @@
-BAT_0O=" 󱃍"
-BAT_10=" 󰁺"
-BAT_20=" 󰁻"
-BAT_30=" 󰁼"
+BAT_0O=" <span color='#bf616a'>󱃍</span>"
+BAT_10=" <span color='#bf616a'>󰁺</span>"
+BAT_20=" <span color='#d08770'>󰁻</span>"
+BAT_30=" <span color='#ebcb8b'>󰁼</span>"
 BAT_40=" 󰁽"
 BAT_50=" 󰁾"
 BAT_60=" 󰁿"
 BAT_70=" 󰂀"
-BAT_80=" 󰂁"
-BAT_90=" 󰂂"
-BAT_100="󰂄"
+BAT_80=" <span color='#a3be8c'>󰂁</span>"
+BAT_90=" <span color='#a3be8c'>󰂂</span>"
+BAT_100=" <span color='#a3be8c'>󰂄</span>"
 
 CHR_0O=" 󰢟 "
 CHR_10=" 󰢜 "
@@ -18,9 +18,9 @@ CHR_40=" 󰂈 "
 CHR_50=" 󰢝 "
 CHR_60=" 󰂉 "
 CHR_70=" 󰢞 "
-CHR_80=" 󰂊 "
-CHR_90=" 󰂋 "
-CHR_100="󰂄"
+CHR_80=" <span color='#a3be8c'>󰂊 </span>"
+CHR_90=" <span color='#a3be8c'>󰂋 </span>"
+CHR_100=" <span color='#a3be8c'>󰂄</span>"
 
 POW=$(cat /sys/class/power_supply/BAT0/capacity)
 PO=$(echo $POW | rev | cut -c 2- | rev)
@@ -50,10 +50,10 @@ get_chr() {
   		4) echo "$CHR_40$POW " ;;
   		5) echo "$CHR_50$POW " ;;
   		6) echo "$CHR_60$POW " ;;
-  		7) echo "$CHR_70$POW " ;;
-  		8) echo "$CHR_80$POW " ;;
-  		9) echo "$CHR_90$POW " ;;
-  		10) echo "$CHR_100$POW " ;;
+        7) echo "$CHR_70$POW " ;;
+		8) echo "$CHR_80$POW " ;;
+		9) echo "$CHR_90$POW " ;;
+		10) echo "$CHR_100$POW " ;;
 esac
 }
 
