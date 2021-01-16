@@ -1,17 +1,13 @@
+#!/bin/bash
+
 LO=" 󰕿"
 HI=" 󰕾 "
 MO=" 󰖀 "
 MU=" 󰝟"
 
-MIC_ON=" 󰍮 "
-MIC_OF=" 󰍭"
-
-# amixer sset Capture toggle
-# amixer sget Capture
-
 VOL=$(awk -F"[][]" '/dB/ { print $2 }' <(amixer sget Master))
-VO=$(echo $VOL | cut -d'%' -f1)
-V=$(echo $VO | rev | cut -c 2- | rev)
+VO=$(echo "$VOL" | cut -d'%' -f1)
+V=$(echo "$VO" | rev | cut -c 2- | rev)
 
 get_vol_icon() {
 	if [[ $VO -gt 50 ]]; then

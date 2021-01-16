@@ -177,6 +177,7 @@ client.focused_inactive #d8dee9 #d8dee9 #888888 #292d2e
 client.urgent 			#2f343a #900000 #ffffff #900000
 
 # start-up thingys
+exec --no-startup-id ~/.fehbg
 exec --no-startup-id xss-lock /home/chaos/.config/i3lock/lock.sh
 exec_always --no-startup-id picom --backend glx --vsync --config /home/chaos/.config/picom/picom.conf
 exec_always --no-startup-id i3-msg gaps inner all set 10

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 LCLK_00="󱑖"
 LCLK_01="󱑋"
 LCLK_02="󱑌"
@@ -10,19 +12,6 @@ LCLK_08="󱑒"
 LCLK_09="󱑓"
 LCLK_10="󱑔"
 LCLK_11="󱑕"
-
-CLK_00="󱑊"
-CLK_01="󱐿"
-CLK_02="󱑀"
-CLK_03="󱑁"
-CLK_04="󱑂"
-CLK_05="󱑃"
-CLK_06="󱑄"
-CLK_07="󱑅"
-CLK_08="󱑆"
-CLK_09="󱑇"
-CLK_10="󱑈"
-CLK_11="󱑉"
 
 TIME=$(date '+%H:%M')
 HR=$(date '+%I')

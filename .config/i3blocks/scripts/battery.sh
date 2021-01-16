@@ -1,4 +1,6 @@
-BAT_0O=" <span color='#bf616a'>󱃍</span>"
+#! /bin/bash
+
+BAT_00=" <span color='#bf616a'>󱃍</span>"
 BAT_10=" <span color='#bf616a'>󰁺</span>"
 BAT_20=" <span color='#d08770'>󰁻</span>"
 BAT_30=" <span color='#ebcb8b'>󰁼</span>"
@@ -10,7 +12,7 @@ BAT_80=" <span color='#a3be8c'>󰂁</span>"
 BAT_90=" <span color='#a3be8c'>󰂂</span>"
 BAT_100=" <span color='#a3be8c'>󰂄</span>"
 
-CHR_0O=" 󰢟 "
+CHR_00=" 󰢟 "
 CHR_10=" 󰢜 "
 CHR_20=" 󰂆 "
 CHR_30=" 󰂇 "
@@ -23,7 +25,7 @@ CHR_90=" <span color='#a3be8c'>󰂋 </span>"
 CHR_100=" <span color='#a3be8c'>󰂄</span>"
 
 POW=$(cat /sys/class/power_supply/BAT0/capacity)
-PO=$(echo $POW | rev | cut -c 2- | rev)
+PO=$(echo "$POW" | rev | cut -c 2- | rev)
 
 get_bat() {
 	case $PO in

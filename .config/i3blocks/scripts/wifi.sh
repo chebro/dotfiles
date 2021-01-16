@@ -1,3 +1,5 @@
+#!/bin/bash
+
 WS_4=" 󰤨 "
 WS_3=" 󰤥 "
 WS_2=" 󰤢 "
@@ -8,7 +10,7 @@ WS_N=" 󰤭 "
 SSID=$(iwgetid -r)
 SSIG=$(grep $(iwgetid -m | awk '{ printf "%s", $1 }') /proc/net/wireless | awk '{ printf "%i\n", int($3 * 100 / 70) }')
 
-SIG=$(echo $SSIG | rev | cut -c 2- | rev)
+SIG=$(echo "$SSIG" | rev | cut -c 2- | rev)
 
 get_bat() {
 	case $SIG in
