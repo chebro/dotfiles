@@ -8,7 +8,6 @@
 /_/ /_/\__,_/\__,_/\__/_/_/\__,_/____/  
                                         
 ```
-
 ### :diamond_shape_with_a_dot_inside: Arch :diamond_shape_with_a_dot_inside: i3 :diamond_shape_with_a_dot_inside: Nord    :diamond_shape_with_a_dot_inside:
 </div>
 
@@ -53,7 +52,7 @@ _Configs were not written with portability in mind, while I'm trying to make it 
          sudo systemctl enable acpid.service
          sudo systemctl start acpid.service
          ```
-     - **Summary:**
+**Summary:**
          
 | **Package**                                                               | **Description**                                                                   |
 |---------------------------------------------------------------------------|-----------------------------------------------------------------------------------|
