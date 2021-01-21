@@ -17,9 +17,11 @@ function setup_zsh() {
   	ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"'
   
   	# backup .zshrc if exists
-  	if [[ -e "$HOME/.zshrc" ]]; then mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
-  
-  	# get my .zshrc
-  	wget -P "$HOME" https://raw.githubusercontent.com/chebro/dotfiles/master/.zshrc
+  	if [[ -e "$HOME/.zshrc" ]]; then 
+		mv "$HOME/.zshrc" "$HOME/.zshrc.bak"
   	fi
+  	
+	# get my .zshrc
+  	wget -P "$HOME" https://raw.githubusercontent.com/chebro/dotfiles/master/.zshrc
 }
+
