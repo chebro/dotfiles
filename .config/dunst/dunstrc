@@ -36,7 +36,7 @@
 
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
-    progress_bar_height = 16
+    progress_bar_height = 18
 
     # Set the frame width of the progress bar
     progress_bar_frame_width = 6
