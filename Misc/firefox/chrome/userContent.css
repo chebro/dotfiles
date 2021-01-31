@@ -1,0 +1,26 @@
+@import url("userChrome.css");
+
+/* Removes white loading page */
+@-moz-document url(about:blank), url(about:newtab), url(about:home) {
+    html:not(#ublock0-epicker), html:not(#ublock0-epicker) body, #newtab-customize-overlay {
+      background: var(--mff-bg) !important;
+    }
+  }
+
+
+  /* Hide scrollbar */
+  /* scrollbar-width: 5px !important; */
+
+  :root{
+	scrollbar-color: #88c0d0 #2e3440 !important;
+    scrollbar-width: thin !important;
+  }
+
+
+  @-moz-document url(about:privatebrowsing) {
+
+  :root{
+ 	scrollbar-color: #88c0d0 #2e3440 !important;
+    scrollbar-width: thin !important;
+  }
+  }
