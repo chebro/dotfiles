@@ -32,6 +32,8 @@ set number				" show current line number
 set relativenumber		" show relative line numbers
 set cursorline			" highlight cursor
 set tabstop=4			" set tab width
+set shiftwidth=4
+set expandtab
 set termguicolors
 
 " ====================================================================
