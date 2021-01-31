@@ -72,9 +72,11 @@ alias free='free -m'                                            # Show sizes in 
 alias pcman='sudo pacman'										# Lazy sudo pacman 
 alias i3lock="$HOME/.config/i3lock/lock.sh"						# i3lock script
 
+alias vim=nvim													# neo neo neo
 alias rm='print "Did you mean trash-put? No? use \\\rm then"; false'
 alias config='/usr/bin/git --git-dir=$HOME/Documents/dotfiles --work-tree=$HOME'
 alias pfetch='PF_INFO="ascii title os kernel uptime pkgs memory" HOSTNAME="nautilus" pfetch'
+alias tuturu="$HOME/Documents/scripts/bash/icat.sh"
 
 # color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
@@ -105,8 +107,9 @@ mcd () { mkdir -p "$1" && cd "$1" }
 DARK="$HOME/Documents/scripts/bash/is-it-dark.sh"
 
 if [ -f $DARK ]; then
-	if [  $($DARK) -ne 1 ]; then	
+	if [  $($DARK) -ne 0 ]; then	
 		SPACESHIP_CHAR_SYMBOL="⏾ "
 	fi
 fi
 
+#echo "kernel v$(uname -r | cut -d'-' -f1)"

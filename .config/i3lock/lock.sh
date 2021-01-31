@@ -21,22 +21,25 @@ i3lock --nofork					\
     --timestr="%I:%M %p"				\
     --time-font="Calvin and Hobbes"		\
     --timesize=150						\
-    --timepos="1450:875"				\
+    --timepos="1350:875"				\
     --timecolor=2e3440ff				\
     \
     --datecolor=d8dee9ff				\
-    --datestr="%A, %d %B"				\
+    --datestr="%A, %d %B"			\
     --datecolor=2e3440ff				\
     --date-font="Calvin and Hobbes"		\
-    --datesize=95						\
-    --datepos="1400:1000"					\
+    --datesize=108						\
+    --datepos="1350:1000"				\
     \
     --verif-font="Calvin and Hobbes"	\
+	--verifcolor=2e3440ff				\
     --verifsize=150						\
-    --veriftext="Welcome!"				\
+    --veriftext=""						\
     --wrong-font="Calvin and Hobbes"	\
+	--wrongcolor=2e3440ff				\
     --wrongsize=150						\
-    --wrongtext="You shall not pass!"	\
-    \
+    --wrongtext="you shall not pass!"	\
+    --noinputtext="-_-"					\
+	\
     --image=/home/chaos/Pictures/nord-calvin-and-hobbes.png
 

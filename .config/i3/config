@@ -11,7 +11,7 @@ font pango:JetBrains Mono, IPAPMincho 13
 # Volume control
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && ~/.config/notifications/volume.sh
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && ~/.config/notifications/volume.sh
-bindsym XF86AudioMute exec --no-startup-id amixer sset Master toggle 
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
 
 # Media control
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -19,7 +19,7 @@ bindsym XF86AudioPause exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
-# Brightness control (requires acpi_video0 rule in /etc/udev/rules.d/backlight.rule)
+# Brightness control 
 bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 2 && ~/.config/notifications/backlight.sh
 bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2 && ~/.config/notifications/backlight.sh
 
@@ -32,8 +32,9 @@ bindsym $mod+Return exec kitty
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec --no-startup-id rofi -modi drun#run -show run
-bindsym $mod+Shift+d exec --no-startup-id i3-dmenu-desktop
+# dmenu, rofi keybinds
+bindsym $mod+d exec --no-startup-id rofi -modi drun#run#window -show drun
+bindsym $mod+x exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 
 # change focus
 bindsym $mod+j focus left
@@ -97,7 +98,7 @@ set $ws8 "8 󰆌 "
 set $ws9 "9 󰆌 "
 
 # switch to workspace
-bindsym $mod+0 workspace $ws0
+bindsym $mod+grave workspace $ws0
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -109,7 +110,7 @@ bindsym $mod+8 workspace $ws8
 bindsym $mod+9 workspace $ws9
 
 # move focused container to workspace
-bindsym $mod+Shift+0 move container to workspace $ws0
+bindsym $mod+Shift+grave move container to workspace $ws0
 bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
@@ -121,6 +122,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 
 ## default app locations
+for_window [class=".*"] border pixel 0
 for_window [class="Spotify"] move to workspace $ws4
 
 # enable auto back and forth
@@ -159,6 +161,7 @@ bindsym $mod+r mode "resize"
 bar {
 	position top
 	tray_output primary
+	#strip_workspace_numbers yes
     status_command i3blocks -c ~/.config/i3blocks/config
 	colors {
     	separator 			#2e3440
@@ -177,10 +180,10 @@ client.focused_inactive #d8dee9 #d8dee9 #888888 #292d2e
 client.urgent 			#2f343a #900000 #ffffff #900000
 
 # start-up thingys
+exec --no-startup-id xrandr --auto
+exec --no-startup-id prime-offload
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id xss-lock ~/.config/i3lock/lock.sh
 exec_always --no-startup-id picom --backend glx --vsync --config ~/.config/picom/picom.conf
-exec_always --no-startup-id i3-msg gaps inner all set 10
-exec_always --no-startup-id i3-msg gaps outer all set 10
-for_window [class=".*"] border pixel 3
+exec_always --no-startup-id i3-msg gaps inner all set 15
 

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-LO=" 󰕿"
+LO=" 󰕿 "
 HI=" 󰕾 "
 MO=" 󰖀 "
 MU=" 󰝟"
 
-VOL=$(awk -F"[][]" '/dB/ { print $2 }' <(amixer sget Master))
+VOL=$(awk -F"[][]" '/Left:/ { print $2 }' <(amixer sget Master))
 VO=$(echo "$VOL" | cut -d'%' -f1)
 V=$(echo "$VO" | rev | cut -c 2- | rev)
 

@@ -36,10 +36,10 @@
 
     # Set the progress bar height. This includes the frame, so make sure
     # it's at least twice as big as the frame width.
-    progress_bar_height = 18
+    progress_bar_height = 11
 
     # Set the frame width of the progress bar
-    progress_bar_frame_width = 6
+    progress_bar_frame_width = 2
     
     # Set the minimum width for the progress bar
     progress_bar_min_width = 120
@@ -57,7 +57,7 @@
     # The transparency of the window.  Range: [0; 100].
     # This option will only work if a compositing window manager is
     # present (e.g. xcompmgr, compiz, etc.).
-    transparency = 0
+    transparency = 15
 
     # The height of the entire notification.  If the height is smaller
     # than the font height and padding combined, it will be raised
@@ -67,7 +67,7 @@
     # Draw a line of "separator_height" pixel height between two
     # notifications.
     # Set to 0 to disable.
-    separator_height = 0
+    separator_height = 2
 
     # Padding between text and separator.
     padding = 8
@@ -77,10 +77,10 @@
 
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
-    frame_width = 3
+    frame_width = 0
 
     # Defines color of the frame around the notification window.
-    frame_color = "#aaaaaa"
+    frame_color = background
 
     # Define a color for the separator.
     # possible values are:
@@ -88,7 +88,7 @@
     #  * foreground: use the same color as the foreground;
     #  * frame: use the same color as the frame;
     #  * anything else will be interpreted as a X color.
-    separator_color = foreground
+    separator_color = auto
 
     # Sort messages by urgency.
     sort = yes
@@ -102,7 +102,7 @@
 
     ### Text ###
 
-    font = Product Sans Thin 13
+    font = JetBrains Mono 13
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.
@@ -308,7 +308,7 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment. 
-	highlight = "#88c0d0"
+	highlight = "#eceff4"
 	background = "#2e3440"
     foreground = "#eceff4"
     frame_color = "#2e3440"
@@ -317,7 +317,7 @@
     #icon = /path/to/icon
 
 [urgency_normal]
-	highlight = "#88c0d0"
+	highlight = "#eceff4"
  	background = "#2e3440"
     foreground = "#eceff4"
     frame_color = "#2e3440"

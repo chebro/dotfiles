@@ -21,7 +21,7 @@ call plug#end()
 " ====================================================================
 
 syntax on
-inoremap jk <ESC>
+inoremap jj <ESC>
 
 set encoding=utf-8		" show utf-8 symbols
 set hlsearch			" highlight all search results
@@ -32,6 +32,7 @@ set number				" show current line number
 set relativenumber		" show relative line numbers
 set cursorline			" highlight cursor
 set tabstop=4			" set tab width
+set termguicolors
 
 " ====================================================================
 " 						Airline Config

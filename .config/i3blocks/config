@@ -31,6 +31,29 @@ border_right=0
 border_top=2
 border_bottom=2
 
+############
+[separator]
+full_text=" "
+color=#2e3440
+background=#4c566a
+border=#2e3440
+border_left=0
+border_right=0
+border_top=2
+border_bottom=2
+############
+
+[checkupdates]
+command=~/.config/i3blocks/scripts/archupdates.sh
+interval=once
+color=#eceff4
+background=#4c566a
+border=#2e3440
+border_left=0
+border_right=0
+border_top=2
+border_bottom=2
+
 [separator]
 color=#81a1c1
 background=#4c566a
