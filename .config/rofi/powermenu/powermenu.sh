@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 dir="$HOME/.config/rofi/powermenu"
-rofi_command="rofi -theme $dir/menu.rasi"
+rofi_command="rofi -theme $dir/menu.rasi -config $dir/config-powermenu.rasi"
 
 uptime=$(uptime -p | sed -e 's/up //g')
 
@@ -27,7 +27,7 @@ logout=""
 # }
 
 # Variable passed to rofi
-options="$shutdown\n$reboot\n$lock\n$suspend\n$logout"
+options="$shutdown\n$reboot\n$suspend\n$lock\n$logout"
 
 chosen="$(echo -e "$options" | $rofi_command -p "Uptime: $uptime" -dmenu -selected-row 2)"
 case $chosen in

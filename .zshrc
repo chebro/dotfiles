@@ -4,11 +4,24 @@
 #	 / /\__ \ | | | | | (__ 
 #	/___|___/_| |_|_|  \___|
 		
+
 # oh-my-zsh section 
 export ZSH="$HOME/.oh-my-zsh"
 export ZSH_THEME="spaceship"
 export plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search)
 source $ZSH/oh-my-zsh.sh
+
+### Fix slowness of pastes with zsh-syntax-highlighting.zsh
+pasteinit() {
+    OLD_SELF_INSERT=${${(s.:.)widgets[self-insert]}[2,3]}
+    zle -N self-insert url-quote-magic 
+}
+
+pastefinish() {
+    zle -N self-insert $OLD_SELF_INSERT
+}
+zstyle :bracketed-paste-magic paste-init pasteinit
+zstyle :bracketed-paste-magic paste-finish pastefinish
 
 # options section
 setopt correct                                                  # Auto correct mistakes
@@ -112,4 +125,14 @@ if [ -f $DARK ]; then
 	fi
 fi
 
-#echo "kernel v$(uname -r | cut -d'-' -f1)"
+u=`tput bold`
+nu=`tput sgr0`
+k="v$(uname -r | cut -d'-' -f1)"
+
+echo \
+"\e[40m kernel \e[0m\e[46m\e[30m\e[0m\e[0m\
+\e[46m\e[30m${u} $k ${nu}\e[0m\e[0m\e[40m\e[36m\e[0m\e[0m\
+\e[40m agent \e[0m\e[44m\e[30m\e[0m\e[0m\
+\e[44m\e[30m${u} $$ ${nu}\e[0m\e[0m\e[34m\e[0m\
+"
+

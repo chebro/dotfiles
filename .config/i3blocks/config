@@ -85,7 +85,7 @@ border_bottom=2
 
 [wifi]
 command=~/.config/i3blocks/scripts/wifi.sh
-interval=10
+interval=2
 color=#2e3440
 background=#88c0d0
 border=#2e3440
@@ -159,7 +159,7 @@ border_bottom=2
 
 [time]
 command=~/.config/i3blocks/scripts/time.sh
-interval=60
+interval=5
 color=#2e3440
 background=#81a1c1
 border=#2e3440

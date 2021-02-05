@@ -91,5 +91,5 @@ visualizer.ellipse.radius=2
 #colors.override.terminal=false
 
 #Specifies the color scheme. The color scheme must be in ~/.config/vis/colors/ directory. Default is "colors"
-colors.scheme=rgb
+colors.scheme=nord
 
