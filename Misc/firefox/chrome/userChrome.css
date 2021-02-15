@@ -9,7 +9,7 @@
   --mff-sidebar-color: #88c0d0;
   --mff-tab-border-radius: 0px;
   --mff-tab-color: #e5e9f0;
-  --mff-tab-font-family: "Overpass";
+  --mff-tab-font-family: "Rubik";
   --mff-tab-font-size: 11pt;
   --mff-tab-font-weight: 400;
   --mff-tab-height: 32px;
@@ -18,11 +18,11 @@
   --mff-tab-soundplaying-bg: #b48ead;
   --mff-urlbar-color: #88c0d0;
   --mff-urlbar-focused-color: #8fbcbb;
-  --mff-urlbar-font-family: "Overpass";
+  --mff-urlbar-font-family: "Rubik";
   --mff-urlbar-font-size: 12pt;
   --mff-urlbar-font-weight: 400;
   --mff-urlbar-results-color: #88c0d0;
-  --mff-urlbar-results-font-family: "Overpass";
+  --mff-urlbar-results-font-family: "Rubik";
   --mff-urlbar-results-font-size: 12pt;
   --mff-urlbar-results-font-weight: 400;
   --mff-urlbar-results-url-color: #81a1c1;
@@ -129,7 +129,7 @@ text-align: center !important;
 
 /* Hide the favicon for tabs */
 hbox.tab-content .tab-icon-image {
-  display: none !important;
+  display: initial !important;
 }
 
 /* Show the favicon for tabs that are pinned */
@@ -235,7 +235,7 @@ width: 50% !important;
 }
 
 .urlbarView-favicon, .urlbarView-type-icon {
-  display: none !important;
+  display: initial !important;
 }
 
 #urlbar-input {

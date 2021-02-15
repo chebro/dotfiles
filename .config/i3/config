@@ -9,9 +9,9 @@ set $mod Mod4
 font pango:JetBrains Mono, IPAPMincho 13
 
 # Volume control
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && ~/.config/notifications/volume.sh
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && ~/.config/notifications/volume.sh
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle 
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && ~/.config/notifications/volume.sh && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && ~/.config/notifications/volume.sh && pkill -RTMIN+10 i3blocks
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && pkill -RTMIN+10 i3blocks
 
 # Media control
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
@@ -20,8 +20,8 @@ bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
 
 # Brightness control 
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 2 && ~/.config/notifications/backlight.sh
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2 && ~/.config/notifications/backlight.sh
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 1 && ~/.config/notifications/backlight.sh
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 1 && ~/.config/notifications/backlight.sh
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -35,7 +35,7 @@ bindsym $mod+Shift+q kill
 # dmenu, rofi keybinds
 #bindsym $mod+d exec --no-startup-id rofi -combi-modi drun#run -modi combi#window -show combi
 bindsym $mod+d exec --no-startup-id rofi -modi drun#run -show drun
-bindsym $mod+w exec --no-startup-id rofi -modi window -show window -no-show-icons
+bindsym $mod+w exec --no-startup-id rofi -modi window -show window
 bindsym $mod+x exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 
 # change focus
@@ -131,6 +131,9 @@ for_window [class=".*"] border pixel 0
 for_window [class="Teams"] move to workspace $ws8
 for_window [class="discord"] move to workspace $ws9
 for_window [class="Spotify"] move to workspace $ws10
+for_window [class="Arandr"] floating enable
+for_window [class="Thunar"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 # disable auto back and forth
 workspace_auto_back_and_forth no
@@ -168,29 +171,32 @@ bindsym $mod+r mode "resize"
 bar {
 	position top
 	tray_output primary
-	#strip_workspace_numbers yes
+	tray_padding 4
+    #strip_workspace_numbers yes
     status_command i3blocks -c ~/.config/i3blocks/config
 	colors {
     	separator 			#2e3440
    		background 			#2e3440
-    	statusline 			#dddddd
+    	statusline 			#d8dee9 
     	focused_workspace 	#88c0d0 #88c0d0 #2e3440 #2e3440
-    	active_workspace 	#333333 #33333 #8fbcbb #8fbcbb
-    	inactive_workspace 	#3b4252 #3b4252 #d8dee9 #d8dee9
-    	urgent_workspace 	#2f343a #900000 #eceff4 #eceff4
+    	active_workspace 	#2e3440 #2e3440 #8fbcbb #8fbcbb
+    	inactive_workspace 	#3b4252 #3b4252 #eceff4 #eceff4
+    	urgent_workspace 	#bf616a #bf616a #eceff4 #eceff4
   	}
 }
 
 client.focused 			#88c0d0 #88c0d0 #88c0d0 #88c0d0
 client.unfocused 		#3b4252 #3b4252 #3b4252 #3b4252 
-client.focused_inactive #d8dee9 #d8dee9 #888888 #292d2e
-client.urgent 			#2f343a #900000 #ffffff #900000
+client.focused_inactive #3b4252 #3b4252 #3b4252 #3b4252
+client.urgent 			#bf616a #bf616a #bf616a #bf616a
 
 # start-up thingys
+#exec --no-startup-id prime-offload
 exec --no-startup-id xrandr --auto
-exec --no-startup-id prime-offload
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id xss-lock ~/.config/i3lock/lock.sh
 exec --no-startup-id picom --backend glx --vsync --config ~/.config/picom/picom.conf
-exec_always --no-startup-id i3-msg gaps inner all set 15
+#exec --no-startup-id nm-applet
+#exec --no-startup-id systemctl --user start redshift-gtk
+exec_always --no-startup-id i3-msg gaps inner all set 10
 

@@ -46,6 +46,7 @@ border_bottom=2
 [checkupdates]
 command=~/.config/i3blocks/scripts/archupdates.sh
 interval=once
+signal=9
 color=#eceff4
 background=#4c566a
 border=#2e3440
@@ -116,7 +117,8 @@ border_bottom=2
 
 [volume]
 command=~/.config/i3blocks/scripts/volume.sh
-interval=2
+interval=once
+signal=10
 color=#eceff4
 background=#4c566a
 border=#2e3440
@@ -139,7 +141,7 @@ border_bottom=2
 
 [battery]
 command=~/.config/i3blocks/scripts/battery.sh
-interval=2
+interval=5
 color=#eceff4
 background=#4c566a
 border=#2e3440
@@ -187,4 +189,13 @@ border_left=0
 border_right=0
 border_top=2
 border_bottom=2
+
+#[separator]
+#color=#2e3440
+#background=#88c0d0
+#border=#2e3440
+#border_left=0
+#border_right=0
+#border_top=2
+#border_bottom=2
 

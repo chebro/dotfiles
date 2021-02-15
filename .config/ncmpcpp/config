@@ -1,0 +1,71 @@
+### Directories ###
+ncmpcpp_directory = ~/.config/ncmpcpp
+lyrics_directory  = ~/.config/ncmpcpp/lyrics
+mpd_music_dir     = ~/Music
+mpd_port          = 6600
+
+### Behaviour ###
+execute_on_song_change = "dunstify -h string:x-canonical-private-synchronous:mpd -u NORMAL "Now Playing" "$(mpc --format '%title% - %artist%' current)" -I $HOME/.icons/linebit/music.png"
+message_delay_time = 1
+playlist_disable_highlight_delay = 2
+autocenter_mode = "yes"
+centered_cursor = "yes"
+ignore_leading_the = "yes"
+allow_for_physical_item_deletion = "yes"
+
+### Visualizer ###
+visualizer_data_source = /tmp/mpd.fifo
+visualizer_output_name = "mpd_visualizer"
+visualizer_spectrum_smooth_look = no
+visualizer_in_stereo = "yes"
+visualizer_look = ●●
+
+### Appearance ###
+colors_enabled = "yes"
+playlist_display_mode = "columns"
+user_interface = classic
+#user_interface = alternative
+display_volume_level = "yes"
+display_remaining_time = "no"
+playlist_separate_albums = "no"
+
+# Window #
+song_window_title_format = "Music"
+# song_window_title_format = "{%a - }{%t}|{%f}"
+statusbar_visibility = "no"
+header_visibility = "no"
+titles_visibility = "no"
+
+# Progress bar #
+#progressbar_look = "▂▂▂"
+progressbar_look = "━●━"
+progressbar_color = "black"
+progressbar_elapsed_color = "cyan"
+
+
+# Alternative UI <-|
+alternative_ui_separator_color = "black"
+alternative_header_first_line_format = $b$7<-$/b$7| $b$8{%t}|{%f}$/b $7|$b$7->$/b 
+alternative_header_second_line_format = {$b{$3%a$9}{ - $4%b$9}{ ($3%y$9)}}|{%D}
+
+# Song list #
+#song_columns_list_format = (20)[]{a} (6f)[green]{NE} (50)[white]{t|f:Title} (20)[cyan]{b} (7f)[magenta]{l}
+#song_list_format = {%a - }{%t}|{$8%f$9}$R{$3(%l)$9}
+#song_status_format = {{%a{ "%b"{ (%y)}} - }{%t}}|{%f}
+#song_library_format = {%n - }{%t}|{%f}
+
+song_status_format= "$7%t"
+song_list_format = "  %t $R%a %l  "
+song_columns_list_format = "(53)[white]{tr} (45)[cyan]{a}"
+song_library_format = {{%a - %t} (%b)}|{%f}
+
+# Colors #
+main_window_color = "white"
+current_item_prefix = "$(cyan)$r"
+current_item_suffix = "$/r$(end)"
+current_item_inactive_column_prefix = $(white)
+current_item_inactive_column_suffix = $(cyan)
+
+# Other
+follow_now_playing_lyrics = "yes"
+empty_tag_marker = ""

@@ -40,3 +40,5 @@ set recolor                     "true"
 set recolor-keephue             "true"
 
 set selection-clipboard clipboard
+
+set guioptions ""

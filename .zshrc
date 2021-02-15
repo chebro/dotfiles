@@ -4,10 +4,12 @@
 #	 / /\__ \ | | | | | (__ 
 #	/___|___/_| |_|_|  \___|
 		
+# friendship ended with spaceship, now starship is my best friend
+eval "$(starship init zsh)"
 
 # oh-my-zsh section 
 export ZSH="$HOME/.oh-my-zsh"
-export ZSH_THEME="spaceship"
+#export ZSH_THEME="spaceship"
 export plugins=(git zsh-syntax-highlighting zsh-autosuggestions zsh-history-substring-search)
 source $ZSH/oh-my-zsh.sh
 
@@ -121,8 +123,10 @@ DARK="$HOME/Documents/scripts/bash/is-it-dark.sh"
 
 if [ -f $DARK ]; then
 	if [  $($DARK) -ne 0 ]; then	
-		SPACESHIP_CHAR_SYMBOL="⏾ "
-	fi
+        sed -i 's/▲/⏾/g' "$HOME/.config/starship.toml"
+    else
+        sed -i 's/⏾/▲/g' "$HOME/.config/starship.toml"
+    fi
 fi
 
 u=`tput bold`

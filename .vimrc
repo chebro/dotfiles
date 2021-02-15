@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 	Plug 'vim-airline/vim-airline-themes'
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'dense-analysis/ale'
+    Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 call plug#end()
 
 " ====================================================================
@@ -21,7 +22,7 @@ call plug#end()
 " ====================================================================
 
 syntax on
-inoremap jj <ESC>
+inoremap jk <ESC>
 
 set encoding=utf-8		" show utf-8 symbols
 set hlsearch			" highlight all search results
@@ -51,6 +52,8 @@ let g:airline_right_alt_sep = ''
 let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
+
+let g:Hexokinase_highlighters = ['backgroundfull']
 
 " ====================================================================
 "	 					Nord Vim Config
