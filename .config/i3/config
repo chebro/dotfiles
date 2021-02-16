@@ -6,7 +6,7 @@
 #	                               |___/ 
 
 set $mod Mod4
-font pango:JetBrains Mono, IPAPMincho 13
+font pango:Iosevka 14
 
 # Volume control
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && ~/.config/notifications/volume.sh && pkill -RTMIN+10 i3blocks

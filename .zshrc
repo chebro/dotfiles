@@ -118,17 +118,6 @@ export PINENTRY_USER_DATA="USE_CURSES=1"
 # TODO: create custom functions script
 mcd () { mkdir -p "$1" && cd "$1" }
 
-# change prompt at ⏾
-DARK="$HOME/Documents/scripts/bash/is-it-dark.sh"
-
-if [ -f $DARK ]; then
-	if [  $($DARK) -ne 0 ]; then	
-        sed -i 's/▲/⏾/g' "$HOME/.config/starship.toml"
-    else
-        sed -i 's/⏾/▲/g' "$HOME/.config/starship.toml"
-    fi
-fi
-
 u=`tput bold`
 nu=`tput sgr0`
 k="v$(uname -r | cut -d'-' -f1)"
