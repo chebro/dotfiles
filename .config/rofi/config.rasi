@@ -1,13 +1,13 @@
 configuration {
-	display-combi:   "󰣇 APPS";
-	display-drun:    "󰣇 APPS";
-	display-run:     "󰏖 PKGS";
-	display-window:  "󱂬 WINS";
+	display-combi:   "󰣇 Apps";
+	display-drun:    "󰣇 Apps";
+	display-run:     "󰏖 Pkgs";
+	display-window:  "󱂬 Wins";
 	display-ssh:	 "󰆍 SSH";
 	sidebar-mode:    true;
 	icon-theme: "Nord-Icons";
     show-icons:true;
-	font: "JetBrains Mono 13";
+	font: "Iosevka 14";
 }
 
 * {
