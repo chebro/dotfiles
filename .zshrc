@@ -123,9 +123,9 @@ DARK="$HOME/Documents/scripts/bash/is-it-dark.sh"
 
 if [ -f $DARK ]; then
 	if [  $($DARK) -ne 0 ]; then	
-        sed -i 's/▲/⏾/g' "$HOME/.config/starship.toml"
+        sed -i 's/λ/⏾/g' "$HOME/.config/starship.toml"
     else
-        sed -i 's/⏾/▲/g' "$HOME/.config/starship.toml"
+        sed -i 's/⏾/λ/g' "$HOME/.config/starship.toml"
     fi
 fi
 
