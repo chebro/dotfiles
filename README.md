@@ -75,6 +75,7 @@ _Configs were not written with portability in mind, while I'm trying to make it 
    Unzip the fonts to `~/.fonts` or `~/.local/share/fonts` and run `fc-cache -v` to build the font info cache.
 
 4. Clone my repo and put all files under `.config` in your `~/.config` and you should be good to go!
+   + **`Caution`** : Customary heads up that this step will not work for all the configs/scripts.
 
 ## Gallery
 
