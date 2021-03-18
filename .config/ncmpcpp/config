@@ -5,7 +5,7 @@ mpd_music_dir     = ~/Music
 mpd_port          = 6600
 
 ### Behaviour ###
-execute_on_song_change = "dunstify -h string:x-canonical-private-synchronous:mpd -u NORMAL "Now Playing" "$(mpc --format '%title% - %artist%' current)" -I $HOME/.icons/linebit/music.png"
+execute_on_song_change = "$HOME/.config/ncmpcpp/mpd-notification"
 message_delay_time = 1
 playlist_disable_highlight_delay = 2
 autocenter_mode = "yes"
