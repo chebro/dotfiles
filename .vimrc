@@ -15,6 +15,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'arcticicestudio/nord-vim'
 	Plug 'dense-analysis/ale'
     Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+    Plug 'preservim/nerdtree'
+    Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " ====================================================================
@@ -36,6 +38,9 @@ set tabstop=4			" set tab width
 set shiftwidth=4
 set expandtab
 set termguicolors
+
+" Mirror the NERDTree before showing it. This makes it the same on all tabs.
+nnoremap <C-n> :NERDTreeMirror<CR>:NERDTreeFocus<CR>
 
 " ====================================================================
 " 						Airline Config

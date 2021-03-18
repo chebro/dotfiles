@@ -23,6 +23,7 @@ border_bottom=2
 [mediaplayer]
 command=~/.config/i3blocks/scripts/media.sh
 interval=2
+signal=6
 color=#eceff4
 background=#4c566a
 border=#2e3440
@@ -86,7 +87,8 @@ border_bottom=2
 
 [wifi]
 command=~/.config/i3blocks/scripts/wifi.sh
-interval=2
+interval=once
+signal=8
 color=#2e3440
 background=#88c0d0
 border=#2e3440

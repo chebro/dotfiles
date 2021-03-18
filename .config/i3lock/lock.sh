@@ -29,7 +29,7 @@ i3lock --nofork					\
     --datecolor=2e3440ff				\
     --date-font="Calvin and Hobbes"		\
     --datesize=108						\
-    --datepos="1350:1000"				\
+    --datepos="1350:1002"				\
     \
     --verif-font="Calvin and Hobbes"	\
 	--verifcolor=2e3440ff				\

@@ -14,12 +14,12 @@ get_vol_icon() {
 		echo "$HI$V"
 	elif [[ $VO -gt 25 ]]; then
 		echo "$MO$V"
-	else 
+	else
 		echo "$LO$V"
-	fi	
+	fi
 }
 
-if [[ $(amixer get Master | grep '\[on\]') ]]; then
+if amixer get Master | grep -q '\[on\]'; then
 	get_vol_icon
 else
 	echo "$MU"

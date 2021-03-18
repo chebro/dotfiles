@@ -1,13 +1,13 @@
 configuration {
-	display-combi:   "󰣇 Apps";
-	display-drun:    "󰣇 Apps";
-	display-run:     "󰏖 Pkgs";
-	display-window:  "󱂬 Wins";
+	display-combi:   "󰣇 APPS";
+	display-drun:    "󰣇 APPS";
+	display-run:     "󰏖 PKGS";
+	display-window:  "󱂬 WINS";
 	display-ssh:	 "󰆍 SSH";
 	sidebar-mode:    true;
-	icon-theme: "Nord-Icons";
+	icon-theme: "Papirus";
     show-icons:true;
-	font: "Iosevka 14";
+	font: "JetBrains Mono 13";
 }
 
 * {
@@ -100,7 +100,7 @@ element normal.active {
 element selected.normal {
 	background-color: @selected-normal-background;
 	text-color:       @selected-normal-foreground;
-	border:           0 5px solid 0 0;
+	border:           0 0 5 0;
 	border-color:	    @active-background;
 }
 

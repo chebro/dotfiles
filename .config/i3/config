@@ -6,7 +6,7 @@
 #	                               |___/ 
 
 set $mod Mod4
-font pango:JetBrainsMono Nerd Font, IPAPMincho 13
+font pango:Iosevka 14
 
 # Volume control
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && ~/.config/notifications/volume.sh && pkill -RTMIN+10 i3blocks
@@ -28,6 +28,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec kitty
+#bindsym $mod+Return exec --no-startup-id st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -134,6 +135,15 @@ for_window [class="Spotify"] move to workspace $ws10
 for_window [class="Arandr"] floating enable
 for_window [class="Thunar"] floating enable
 for_window [class="Pavucontrol"] floating enable
+#for_window [class="firefox"] floating enable
+
+## force floating for pop-ups and such
+for_window [window_role="pop-up"]                       floating enable
+for_window [window_role="bubble"]                       floating enable 
+for_window [window_role="task_dialog"]                  floating enable
+for_window [window_role="Preferences"]                  floating enable
+for_window [window_type="dialog"]                       floating enable 
+for_window [window_type="menu"]                         floating enable
 
 # disable auto back and forth
 workspace_auto_back_and_forth no
@@ -143,7 +153,9 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e exec i3-msg exit
+bindsym $mod+Shift+e exec --no-startup-id ~/.config/rofi/powermenu/powermenu.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {

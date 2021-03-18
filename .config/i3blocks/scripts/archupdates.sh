@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Run checkupdates if 24h has passed since last check
+# Pending update list are stored at $HOME/Misc/checkupdates/pending
+# Update checktimes are appended to $HOME/Misc/checkupdates/updatechecktime
+
 ARCH=" 󰣇 "
 DIFF=$(echo "scale=2; ($(date +%s)-$(date -r "$HOME/Misc/checkupdates/updatechecktime" +%s)) / (3600 * 24)" | bc)
 PEND=$(cat "$HOME/Misc/checkupdates/pending")
@@ -17,7 +21,7 @@ fi
 LIST=$(checkupdates|cut -d' ' -f1)
 date >> "$HOME/Misc/checkupdates/updatechecktime"
 
-if [[ $LIST ]]; then                               
+if [[ $LIST ]]; then
     COUNT=$(echo "$LIST"|wc -l)
     echo "$ARCH$COUNT "
     echo "$LIST" > "$HOME/Misc/checkupdates/pending"

@@ -84,14 +84,16 @@ alias grep='grep --color=auto'									# Use tty colors when grep-ing
 alias cp='cp -i'                                                # Confirm before overwriting something
 alias df='df -h'                                                # Human-readable sizes
 alias free='free -m'                                            # Show sizes in MB
-alias pcman='sudo pacman'										# Lazy sudo pacman 
-alias i3lock="$HOME/.config/i3lock/lock.sh"						# i3lock script
 
-alias vim=nvim													# neo neo neo
+alias pcman='sudo pacman'								
+alias i3lock="$HOME/.config/i3lock/lock.sh"					
+alias vim=nvim													
 alias rm='print "Did you mean trash-put? No? use \\\rm then"; false'
 alias config='/usr/bin/git --git-dir=$HOME/Documents/dotfiles --work-tree=$HOME'
 alias pfetch='PF_INFO="ascii title os kernel uptime pkgs memory" HOSTNAME="nautilus" pfetch'
-alias tuturu="$HOME/Documents/scripts/bash/icat.sh"
+alias tuturu="$HOME/Documents/scripts/bash/tuturu.sh"
+alias music="$HOME/Documents/scripts/private/music.sh"
+alias sx="startx"
 
 # color man pages
 export LESS_TERMCAP_mb=$'\E[01;32m'
@@ -117,17 +119,6 @@ export PINENTRY_USER_DATA="USE_CURSES=1"
 
 # TODO: create custom functions script
 mcd () { mkdir -p "$1" && cd "$1" }
-
-# change prompt at ⏾
-DARK="$HOME/Documents/scripts/bash/is-it-dark.sh"
-
-if [ -f $DARK ]; then
-	if [  $($DARK) -ne 0 ]; then	
-        sed -i 's/λ/⏾/g' "$HOME/.config/starship.toml"
-    else
-        sed -i 's/⏾/λ/g' "$HOME/.config/starship.toml"
-    fi
-fi
 
 u=`tput bold`
 nu=`tput sgr0`
